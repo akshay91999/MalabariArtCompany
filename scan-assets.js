@@ -23,8 +23,8 @@ function copyFolderSync(from, to) {
 
 try {
     if (!fs.existsSync(srcFolder)) {
-        console.error(`Source Assets directory does not exist: ${srcFolder}`);
-        process.exit(1);
+        console.warn(`Source Assets directory does not exist: ${srcFolder}. Skipping scan (relying on pre-scanned assets).`);
+        process.exit(0);
     }
 
     console.log(`Cleaning old public/assets...`);
