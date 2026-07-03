@@ -1,0 +1,323 @@
+{
+  "logo": "/assets/Malabai Art Company Logo CLR (WHT).png",
+  "logoSymbol": "/assets/Malabai Art Company Logo Symbol CLR (WHT).png",
+  "images": [
+    {
+      "src": "/assets/3D Wall art/WhatsApp Image 2026-07-01 at 2.12.22 PM (2).jpeg",
+      "category": "3D Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.22 PM (2).jpeg"
+    },
+    {
+      "src": "/assets/3D Wall art/WhatsApp Image 2026-07-01 at 2.12.50 PM (1).jpeg",
+      "category": "3D Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.50 PM (1).jpeg"
+    },
+    {
+      "src": "/assets/3D Wall art/WhatsApp Image 2026-07-01 at 2.12.50 PM (2).jpeg",
+      "category": "3D Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.50 PM (2).jpeg"
+    },
+    {
+      "src": "/assets/3D Wall art/WhatsApp Image 2026-07-01 at 2.12.50 PM.jpeg",
+      "category": "3D Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.50 PM.jpeg"
+    },
+    {
+      "src": "/assets/3D Wall art/WhatsApp Image 2026-07-01 at 2.12.51 PM.jpeg",
+      "category": "3D Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.51 PM.jpeg"
+    },
+    {
+      "src": "/assets/3D Wall art/WhatsApp Image 2026-07-01 at 2.12.58 PM.jpeg",
+      "category": "3D Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.58 PM.jpeg"
+    },
+    {
+      "src": "/assets/3D Wall art/WhatsApp Image 2026-07-01 at 2.13.04 PM.jpeg",
+      "category": "3D Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.13.04 PM.jpeg"
+    },
+    {
+      "src": "/assets/Mural art/WhatsApp Image 2026-07-01 at 2.12.32 PM.jpeg",
+      "category": "Mural art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.32 PM.jpeg"
+    },
+    {
+      "src": "/assets/Mural art/WhatsApp Image 2026-07-01 at 2.12.34 PM (1).jpeg",
+      "category": "Mural art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.34 PM (1).jpeg"
+    },
+    {
+      "src": "/assets/Mural art/WhatsApp Image 2026-07-01 at 2.12.34 PM (2).jpeg",
+      "category": "Mural art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.34 PM (2).jpeg"
+    },
+    {
+      "src": "/assets/Mural art/WhatsApp Image 2026-07-01 at 2.12.34 PM.jpeg",
+      "category": "Mural art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.34 PM.jpeg"
+    },
+    {
+      "src": "/assets/Mural art/WhatsApp Image 2026-07-01 at 2.12.35 PM.jpeg",
+      "category": "Mural art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.35 PM.jpeg"
+    },
+    {
+      "src": "/assets/Mural art/WhatsApp Image 2026-07-01 at 2.12.36 PM.jpeg",
+      "category": "Mural art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.36 PM.jpeg"
+    },
+    {
+      "src": "/assets/Mural art/WhatsApp Image 2026-07-01 at 2.12.37 PM (1).jpeg",
+      "category": "Mural art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.37 PM (1).jpeg"
+    },
+    {
+      "src": "/assets/Mural art/WhatsApp Image 2026-07-01 at 2.12.37 PM.jpeg",
+      "category": "Mural art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.37 PM.jpeg"
+    },
+    {
+      "src": "/assets/Mural art/WhatsApp Image 2026-07-01 at 2.13.05 PM.jpeg",
+      "category": "Mural art",
+      "name": "WhatsApp Image 2026-07-01 at 2.13.05 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.08 PM (1).jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.08 PM (1).jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.08 PM (2).jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.08 PM (2).jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.08 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.08 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.09 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.09 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.11 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.11 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.17 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.17 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.19 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.19 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.21 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.21 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.22 PM (1).jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.22 PM (1).jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.22 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.22 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.24 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.24 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.25 PM (1).jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.25 PM (1).jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.25 PM (2).jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.25 PM (2).jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.25 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.25 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.28 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.28 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.30 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.30 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.37 PM (2).jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.37 PM (2).jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.39 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.39 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.40 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.40 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.41 PM (1).jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.41 PM (1).jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.41 PM (2).jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.41 PM (2).jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.41 PM (3).jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.41 PM (3).jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.41 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.41 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.43 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.43 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.44 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.44 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.46 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.46 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.47 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.47 PM.jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.49 PM (1).jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.49 PM (1).jpeg"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Image 2026-07-01 at 2.12.49 PM.jpeg",
+      "category": "Wall art",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.49 PM.jpeg"
+    },
+    {
+      "src": "/assets/WhatsApp Image 2026-06-30 at 1.00.10 PM.jpeg",
+      "category": "Canvas painting",
+      "name": "WhatsApp Image 2026-06-30 at 1.00.10 PM.jpeg"
+    },
+    {
+      "src": "/assets/WhatsApp Image 2026-06-30 at 12.59.43 PM.jpeg",
+      "category": "Canvas painting",
+      "name": "WhatsApp Image 2026-06-30 at 12.59.43 PM.jpeg"
+    },
+    {
+      "src": "/assets/WhatsApp Image 2026-06-30 at 12.59.44 PM.jpeg",
+      "category": "Canvas painting",
+      "name": "WhatsApp Image 2026-06-30 at 12.59.44 PM.jpeg"
+    },
+    {
+      "src": "/assets/WhatsApp Image 2026-07-01 at 2.12.25 PM (3).jpeg",
+      "category": "Canvas painting",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.25 PM (3).jpeg"
+    },
+    {
+      "src": "/assets/WhatsApp Image 2026-07-01 at 2.12.37 PM.jpeg",
+      "category": "Canvas painting",
+      "name": "WhatsApp Image 2026-07-01 at 2.12.37 PM.jpeg"
+    }
+  ],
+  "videos": [
+    {
+      "src": "/assets/3D Wall art/WhatsApp Video 2026-07-01 at 2.12.50 PM.mp4",
+      "category": "3D Wall art",
+      "name": "WhatsApp Video 2026-07-01 at 2.12.50 PM.mp4"
+    },
+    {
+      "src": "/assets/3D Wall art/WhatsApp Video 2026-07-01 at 2.12.55 PM.mp4",
+      "category": "3D Wall art",
+      "name": "WhatsApp Video 2026-07-01 at 2.12.55 PM.mp4"
+    },
+    {
+      "src": "/assets/3D Wall art/WhatsApp Video 2026-07-01 at 2.12.58 PM.mp4",
+      "category": "3D Wall art",
+      "name": "WhatsApp Video 2026-07-01 at 2.12.58 PM.mp4"
+    },
+    {
+      "src": "/assets/3D Wall art/WhatsApp Video 2026-07-01 at 2.13.04 PM.mp4",
+      "category": "3D Wall art",
+      "name": "WhatsApp Video 2026-07-01 at 2.13.04 PM.mp4"
+    },
+    {
+      "src": "/assets/Mural art/WhatsApp Video 2026-07-01 at 2.12.17 PM.mp4",
+      "category": "Mural art",
+      "name": "WhatsApp Video 2026-07-01 at 2.12.17 PM.mp4"
+    },
+    {
+      "src": "/assets/Mural art/WhatsApp Video 2026-07-01 at 2.12.51 PM (1).mp4",
+      "category": "Mural art",
+      "name": "WhatsApp Video 2026-07-01 at 2.12.51 PM (1).mp4"
+    },
+    {
+      "src": "/assets/Mural art/WhatsApp Video 2026-07-01 at 2.12.51 PM.mp4",
+      "category": "Mural art",
+      "name": "WhatsApp Video 2026-07-01 at 2.12.51 PM.mp4"
+    },
+    {
+      "src": "/assets/Mural art/WhatsApp Video 2026-07-01 at 2.13.31 PM.mp4",
+      "category": "Mural art",
+      "name": "WhatsApp Video 2026-07-01 at 2.13.31 PM.mp4"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Video 2026-07-01 at 2.12.26 PM.mp4",
+      "category": "Wall art",
+      "name": "WhatsApp Video 2026-07-01 at 2.12.26 PM.mp4"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Video 2026-07-01 at 2.12.27 PM.mp4",
+      "category": "Wall art",
+      "name": "WhatsApp Video 2026-07-01 at 2.12.27 PM.mp4"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Video 2026-07-01 at 2.12.28 PM.mp4",
+      "category": "Wall art",
+      "name": "WhatsApp Video 2026-07-01 at 2.12.28 PM.mp4"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Video 2026-07-01 at 2.12.32 PM.mp4",
+      "category": "Wall art",
+      "name": "WhatsApp Video 2026-07-01 at 2.12.32 PM.mp4"
+    },
+    {
+      "src": "/assets/Wall art/WhatsApp Video 2026-07-01 at 2.12.49 PM.mp4",
+      "category": "Wall art",
+      "name": "WhatsApp Video 2026-07-01 at 2.12.49 PM.mp4"
+    }
+  ]
+}
