@@ -66,7 +66,7 @@ export default function Navbar() {
                     <img
                         src={assetsData.logoSymbol || assetsData.logo}
                         alt="Malabari Art Company Logo"
-                        className="w-10 h-10 object-contain group-hover:scale-105 transition-transform duration-300"
+                        className="w-12 h-12 md:w-16 md:h-16 object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="flex flex-col">
                         <span className="font-serif text-lg md:text-xl font-semibold tracking-wide text-ink-black leading-none">
