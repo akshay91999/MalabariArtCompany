@@ -99,15 +99,14 @@ export default function Hero() {
                 </motion.span>
 
                 {/* Main Serif Headline */}
-                <h1 className="sr-only">{brandStory.headline}</h1>
-                <motion.div
+                <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
                     className="font-serif text-4xl sm:text-6xl md:text-7xl font-light tracking-wide leading-tight px-2 max-w-4xl"
                 >
                     {brandStory.headline}
-                </motion.div>
+                </motion.h1>
 
                 {/* Subhead narrative text */}
                 <motion.p
