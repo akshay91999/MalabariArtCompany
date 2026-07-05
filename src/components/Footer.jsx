@@ -60,9 +60,12 @@ export default function Footer() {
                         original canvases that bridge heritage with modern spaces. Experience handmade
                         Indian artistry.
                     </p>
+                    <p className="text-[11px] uppercase tracking-wider text-[#d87c56] font-serif italic max-w-md leading-relaxed">
+                        "Art is the mirror that reflects life's beauty"
+                    </p>
                     <div className="flex items-center gap-4 mt-2">
                         <a
-                            href="https://instagram.com"
+                            href="https://instagram.com/malabari_art.company"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-2.5 bg-primary-bg/5 hover:bg-[#d87c56] hover:text-white rounded-full transition-all duration-300"

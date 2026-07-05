@@ -79,26 +79,42 @@ export default function ContactForm() {
                         </span>
                         <p className="text-sm text-ink-black/60 font-sans leading-relaxed">
                             We exhibit original paintings in our gallery by reservation. Drop by or
-                            reach out to coordinate private previews in Kochi and Bangalore studios.
+                            reach out to coordinate private previews in our Kannur and Kochi studios.
                         </p>
 
                         <div className="flex flex-col gap-6 font-sans text-sm mt-4">
-                            <a href="mailto:info@malabariart.com" className="flex items-center gap-4 text-ink-black/70 hover:text-accent-orange transition-colors group">
+                            <a href="mailto:malabariartcompany@gmail.com" className="flex items-center gap-4 text-ink-black/70 hover:text-accent-orange transition-colors group">
                                 <span className="p-3 bg-muted-ivory border border-black/5 group-hover:bg-[#FCF6F0] transition-colors text-accent-orange">
                                     <Mail size={16} />
                                 </span>
                                 <div className="flex flex-col">
                                     <span className="text-[10px] uppercase text-ink-black/40 font-bold tracking-wider">Email Inquiry</span>
-                                    <span className="font-medium mt-0.5">info@malabariart.com [PLACEHOLDER]</span>
+                                    <span className="font-medium mt-0.5">malabariartcompany@gmail.com</span>
                                 </div>
                             </a>
-                            <a href="tel:+919999999999" className="flex items-center gap-4 text-ink-black/70 hover:text-accent-orange transition-colors group">
-                                <span className="p-3 bg-muted-ivory border border-black/5 group-hover:bg-[#FCF6F0] transition-colors text-accent-orange">
+                            <div className="flex items-center gap-4 text-ink-black/70 group">
+                                <span className="p-3 bg-muted-ivory border border-black/5 text-accent-orange">
                                     <Phone size={16} />
                                 </span>
                                 <div className="flex flex-col">
                                     <span className="text-[10px] uppercase text-ink-black/40 font-bold tracking-wider">Curator Phone</span>
-                                    <span className="font-medium mt-0.5">+91 99999 99999 [PLACEHOLDER]</span>
+                                    <div className="flex flex-col gap-0.5 font-medium mt-0.5">
+                                        <a href="tel:+917558958377" className="hover:text-accent-orange transition-colors">+91 75589 58377</a>
+                                        <a href="tel:+919207524079" className="hover:text-accent-orange transition-colors">+91 92075 24079</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="https://instagram.com/malabari_art.company" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-ink-black/70 hover:text-accent-orange transition-colors group">
+                                <span className="p-3 bg-muted-ivory border border-black/5 group-hover:bg-[#FCF6F0] transition-colors text-accent-orange">
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg>
+                                </span>
+                                <div className="flex flex-col">
+                                    <span className="text-[10px] uppercase text-ink-black/40 font-bold tracking-wider">Instagram</span>
+                                    <span className="font-medium mt-0.5">@malabari_art.company</span>
                                 </div>
                             </a>
                             <div className="flex items-center gap-4 text-ink-black/70 group">
@@ -107,7 +123,7 @@ export default function ContactForm() {
                                 </span>
                                 <div className="flex flex-col">
                                     <span className="text-[10px] uppercase text-ink-black/40 font-bold tracking-wider">Design Studio</span>
-                                    <span className="font-medium mt-0.5">Kochi Fort, Kerala, India [PLACEHOLDER]</span>
+                                    <span className="font-medium mt-0.5">Kannur & Kochi, Kerala, India</span>
                                 </div>
                             </div>
                         </div>
