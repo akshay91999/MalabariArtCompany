@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.malabariart.com/sitemap.xml
+Sitemap: https://malabariartcompany.in/sitemap.xml
