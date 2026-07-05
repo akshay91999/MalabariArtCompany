@@ -51,12 +51,8 @@ const TITLE_POOL = [
 ];
 
 const ARTIST_POOL = [
-    "Vasant Malabari [PLACEHOLDER]",
-    "Ananya Menon [PLACEHOLDER]",
-    "Rajesh Panicker [PLACEHOLDER]",
-    "Kalyani Nair [PLACEHOLDER]",
-    "Devanand K. [PLACEHOLDER]",
-    "Deepa Subramaniam [PLACEHOLDER]"
+    "Aswanth",
+    "Amal"
 ];
 
 export const CATEGORIES = [
@@ -126,13 +122,13 @@ export const brandStory = {
     headline: "Contemporary Canvas. Timeless Roots.",
     subheading: "Bridging India’s classical art heritage with modern sensibilities.",
     narrativeParagraphs: [
-        "Malabari Art Company was born from a desire to celebrate the visual textures and stories of the Indian subcontinent through a contemporary lens. Based on the historic Malabar coast, our collective of artists captures the vibrant light, cultural rhythms, and profound philosophies of Indian art, adapting them for modern gallery spaces and homes worldwide.",
-        "Founded by a group of passionate art curators and native painters, we specialize in high-quality original oils, acrylics, and mixed-media works. Each canvas is a dialogue between India’s ancient heritage—its mythology, its geography, its colors—and the minimalist design aesthetic of today. [PLACEHOLDER - Insert custom company history and narrative here]",
-        "We believe art is not merely decoration; it is a presence. A window into another perspective, a vessel of calm, or a burst of pure energy. By working closely with master painters and emerging Indian talents, we guarantee the authenticity and narrative depth of every single brushstroke."
+        "Malabari Art Company was born from a desire to celebrate the visual textures and stories of the Indian subcontinent through a contemporary lens. Based on the historic Malabar coast, our founders capture the vibrant light, cultural rhythms, and profound philosophies of Indian art, adapting them for modern gallery spaces and homes worldwide.",
+        "Founded by Aswanth and Amal, two passionate visual artists and native painters, we specialize in high-quality original oils, acrylics, and mixed-media works. Each canvas is a dialogue between India’s ancient heritage—its mythology, its geography, its colors—and the minimalist design aesthetic of today.",
+        "We believe art is not merely decoration; it is a presence. A window into another perspective, a vessel of calm, or a burst of pure energy. Every single brushstroke is handcrafted by us in our studio, guaranteeing the absolute authenticity and raw visual power of every piece."
     ],
     stats: [
         { value: 500, label: "Artworks Sold", suffix: "+" },
-        { value: 50, label: "Artists Collaborated", suffix: "+" },
+        { value: 2, label: "Founding Artists", suffix: "" },
         { value: 10, label: "Years of Heritage", suffix: "+" },
         { value: 100, label: "Authenticity Certified", suffix: "%" }
     ]
