@@ -28,7 +28,7 @@ export default function Lightbox({ artwork, onClose, onPrev, onNext, hasPrev, ha
             ? `Hello Malabari Art Company, I watched the studio reel "${artwork.title}" and would like to consult about commissioning a custom artwork in the "${artwork.category}" category.`
             : `Hello Malabari Art Company, I am interested in purchasing/inquiring about the artwork titled "${artwork.title}" by ${artwork.artist}. (Size: ${artwork.size}, Price: ${artwork.formattedPrice}). Could you please share more details?`
     );
-    const whatsAppLink = `https://wa.me/919999999999?text=${whatsAppMessage}`; // [PLACEHOLDER - WhatsApp number]
+    const whatsAppLink = `https://wa.me/9192075234079?text=${whatsAppMessage}`; // WhatsApp curator number
 
     const handleBackdropClick = (e) => {
         if (e.target === e.currentTarget) {

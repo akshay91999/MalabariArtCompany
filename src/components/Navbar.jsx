@@ -33,7 +33,7 @@ export default function Navbar() {
         setMobileMenuOpen(false);
         const element = document.querySelector(href);
         if (element) {
-            const offset = 80; // height of navbar
+            const offset = 128; // height of navbar
             const bodyRect = document.body.getBoundingClientRect().top;
             const elementRect = element.getBoundingClientRect().top;
             const elementPosition = elementRect - bodyRect;
@@ -64,18 +64,12 @@ export default function Navbar() {
                     className="flex items-center gap-3 group"
                 >
                     <img
-                        src={assetsData.logoSymbol || assetsData.logo}
+                        src={assetsData.logo}
                         alt="Malabari Art Company Logo"
-                        className="w-12 h-12 md:w-16 md:h-16 object-contain group-hover:scale-105 transition-transform duration-300"
+                        className={`w-auto object-contain group-hover:scale-105 transition-all duration-300 ${
+                            isScrolled ? 'h-18 md:h-26' : 'h-24 md:h-36'
+                        }`}
                     />
-                    <div className="flex flex-col">
-                        <span className="font-serif text-lg md:text-xl font-semibold tracking-wide text-ink-black leading-none">
-                            MALABARI
-                        </span>
-                        <span className="text-[10px] uppercase tracking-widest text-accent-orange font-medium mt-0.5">
-                            Art Company
-                        </span>
-                    </div>
                 </a>
 
                 {/* Desktop Nav Links */}
@@ -85,7 +79,9 @@ export default function Navbar() {
                             key={item.label}
                             href={item.href}
                             onClick={(e) => handleScrollToSection(e, item.href)}
-                            className="relative text-sm tracking-wider uppercase text-ink-black/70 hover:text-ink-black transition-colors duration-300 py-2 group font-sans font-medium"
+                            className={`relative text-sm tracking-wider uppercase transition-colors duration-300 py-2 group font-sans font-medium ${
+                                isScrolled ? 'text-ink-black/70 hover:text-ink-black' : 'text-white/80 hover:text-white'
+                            }`}
                         >
                             {item.label}
                             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-orange transition-all duration-300 group-hover:w-full" />
@@ -100,7 +96,11 @@ export default function Navbar() {
                         onClick={(e) => handleScrollToSection(e, '#contact')}
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
-                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-ink-black text-primary-bg text-sm uppercase tracking-wider font-semibold rounded-none border border-ink-black hover:bg-transparent hover:text-ink-black transition-all duration-300 shadow-md"
+                        className={`inline-flex items-center gap-2 px-5 py-2.5 text-sm uppercase tracking-wider font-semibold rounded-none border transition-all duration-300 shadow-md ${
+                            isScrolled
+                                ? 'bg-ink-black text-primary-bg border-ink-black hover:bg-transparent hover:text-ink-black'
+                                : 'bg-transparent text-white border-white hover:bg-white hover:text-ink-black'
+                        }`}
                     >
                         Enquire Now
                         <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -110,7 +110,9 @@ export default function Navbar() {
                 {/* Mobile Toggle Drawer Button */}
                 <button
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    className="md:hidden p-2 text-ink-black focus:outline-none"
+                    className={`md:hidden p-2 focus:outline-none transition-colors duration-300 ${
+                        isScrolled ? 'text-ink-black' : 'text-white'
+                    }`}
                     aria-label="Toggle menu"
                 >
                     {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

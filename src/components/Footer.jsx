@@ -42,18 +42,10 @@ export default function Footer() {
                 <div className="md:col-span-2 flex flex-col gap-6">
                     <div className="flex items-center gap-3">
                         <img
-                            src={assetsData.logoSymbol || assetsData.logo}
+                            src={assetsData.logo}
                             alt="Malabari Art Logo"
-                            className="w-12 h-12 object-contain"
+                            className="h-24 md:h-36 w-auto object-contain"
                         />
-                        <div className="flex flex-col">
-                            <span className="font-serif text-2xl font-bold tracking-wide text-primary-bg leading-none">
-                                MALABARI
-                            </span>
-                            <span className="text-xs uppercase tracking-widest text-[#d87c56] font-medium mt-1">
-                                Art Company
-                            </span>
-                        </div>
                     </div>
                     <p className="max-w-md text-sm leading-relaxed text-primary-bg/50">
                         Rooted in contemporary and modern Indian art, Malabari Art Company curates
