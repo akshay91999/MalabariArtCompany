@@ -25,7 +25,7 @@ export default function ContactForm() {
     const whatsAppMsg = encodeURIComponent(
         `Hello Malabari Art Company, I'd like to consult on a custom art commission! Please let me know the process.`
     );
-    const whatsAppLink = `https://wa.me/9192075234079?text=${whatsAppMsg}`; // WhatsApp curator number
+    const whatsAppLink = `https://wa.me/919207524079?text=${whatsAppMsg}`; // WhatsApp curator number
 
     return (
         <section id="contact" className="py-24 px-6 md:px-12 bg-primary-bg select-none text-left">
