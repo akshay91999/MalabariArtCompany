@@ -42,10 +42,6 @@ async function copyFolderAsync(from, to) {
             const toPath = path.join(to, element);
             await copyFolderAsync(fromPath, toPath);
         } else {
-            const ext = path.extname(element).toLowerCase();
-            if (['.mp4', '.webm', '.ogg', '.mov'].includes(ext) && isProd) {
-                continue;
-            }
             if (isHeic(fromPath)) {
                 const baseName = path.basename(element, path.extname(element));
                 const toPath = path.join(to, baseName + '.jpg');
@@ -139,9 +135,6 @@ try {
                         name: file
                     });
                 } else if (['.mp4', '.webm', '.ogg', '.mov'].includes(ext)) {
-                    if (isProd) {
-                        return;
-                    }
                     const category = relativeDir || 'General Reel';
                     videos.push({
                         src: webPath,

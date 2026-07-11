@@ -368,5 +368,131 @@
       "name": "WhatsApp Image 2026-06-30 at 1.00.10 PM.jpeg"
     }
   ],
-  "videos": []
+  "videos": [
+    {
+      "src": "/assets/Canvas paintings/Mural painting acrylic on canvas.mov",
+      "category": "Canvas paintings",
+      "name": "Mural painting acrylic on canvas.mov"
+    },
+    {
+      "src": "/assets/Portraits drawings/Colour pencil drawing.mov",
+      "category": "Portraits drawings",
+      "name": "Colour pencil drawing.mov"
+    },
+    {
+      "src": "/assets/Portraits drawings/Colour pencil drawing.mp4",
+      "category": "Portraits drawings",
+      "name": "Colour pencil drawing.mp4"
+    },
+    {
+      "src": "/assets/Portraits drawings/Colour pencil drawing(1).mov",
+      "category": "Portraits drawings",
+      "name": "Colour pencil drawing(1).mov"
+    },
+    {
+      "src": "/assets/Portraits drawings/Colour pencil drawing(2).mov",
+      "category": "Portraits drawings",
+      "name": "Colour pencil drawing(2).mov"
+    },
+    {
+      "src": "/assets/Portraits drawings/Colour pencil drawing(3).mov",
+      "category": "Portraits drawings",
+      "name": "Colour pencil drawing(3).mov"
+    },
+    {
+      "src": "/assets/Portraits drawings/IMG_4811.MOV",
+      "category": "Portraits drawings",
+      "name": "IMG_4811.MOV"
+    },
+    {
+      "src": "/assets/Portraits drawings/Portrain acrylic on canvas.mov",
+      "category": "Portraits drawings",
+      "name": "Portrain acrylic on canvas.mov"
+    },
+    {
+      "src": "/assets/Portraits drawings/Portrait drawing.mov",
+      "category": "Portraits drawings",
+      "name": "Portrait drawing.mov"
+    },
+    {
+      "src": "/assets/Portraits drawings/Portrait pencil drawing.mov",
+      "category": "Portraits drawings",
+      "name": "Portrait pencil drawing.mov"
+    },
+    {
+      "src": "/assets/Wall art paintings/Anandha sayanam painting_.mov",
+      "category": "Wall art paintings",
+      "name": "Anandha sayanam painting_.mov"
+    },
+    {
+      "src": "/assets/Wall art paintings/Anandha sayanam painting_(1).mov",
+      "category": "Wall art paintings",
+      "name": "Anandha sayanam painting_(1).mov"
+    },
+    {
+      "src": "/assets/Wall art paintings/Anandha sayanam painting_(2).mov",
+      "category": "Wall art paintings",
+      "name": "Anandha sayanam painting_(2).mov"
+    },
+    {
+      "src": "/assets/Wall art paintings/Boxing painting on wall.mov",
+      "category": "Wall art paintings",
+      "name": "Boxing painting on wall.mov"
+    },
+    {
+      "src": "/assets/Wall art paintings/Mandala art painting on wall.mov",
+      "category": "Wall art paintings",
+      "name": "Mandala art painting on wall.mov"
+    },
+    {
+      "src": "/assets/Wall art paintings/Mandala art painting on wall(1).mov",
+      "category": "Wall art paintings",
+      "name": "Mandala art painting on wall(1).mov"
+    },
+    {
+      "src": "/assets/Wall art paintings/Mandala art painting on wall(2).mov",
+      "category": "Wall art paintings",
+      "name": "Mandala art painting on wall(2).mov"
+    },
+    {
+      "src": "/assets/Wall art paintings/Theyyam painting on wall.mov",
+      "category": "Wall art paintings",
+      "name": "Theyyam painting on wall.mov"
+    },
+    {
+      "src": "/assets/Wall art paintings/Vijay painting on wall.mov",
+      "category": "Wall art paintings",
+      "name": "Vijay painting on wall.mov"
+    },
+    {
+      "src": "/assets/Wall art sculpture/Buddha on wall.mov",
+      "category": "Wall art sculpture",
+      "name": "Buddha on wall.mov"
+    },
+    {
+      "src": "/assets/Wall art sculpture/Buddha on wall(1).mov",
+      "category": "Wall art sculpture",
+      "name": "Buddha on wall(1).mov"
+    },
+    {
+      "src": "/assets/Wall art sculpture/Buddha on wall(2).mov",
+      "category": "Wall art sculpture",
+      "name": "Buddha on wall(2).mov"
+    },
+    {
+      "src": "/assets/Wall art sculpture/Moon art on wall.mov",
+      "category": "Wall art sculpture",
+      "name": "Moon art on wall.mov"
+    },
+    {
+      "src": "/assets/Wall art sculpture/Moon art on wall(1).mov",
+      "category": "Wall art sculpture",
+      "name": "Moon art on wall(1).mov"
+    },
+    {
+      "src": "/assets/Wall art sculpture/Moon art on wall(2).mov",
+      "category": "Wall art sculpture",
+      "name": "Moon art on wall(2).mov"
+    }
+  ]
 }

@@ -22,7 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-/Assets
+!/Assets/
+/Assets/**/*
+!/Assets/**/
+!/Assets/**/*.mov
+!/Assets/**/*.MOV
+!/Assets/**/*.mp4
+!/Assets/**/*.MP4
+/Assets/**/Anandha sayanam painting_.mov
 
 # Ignore large videos to prevent Git lock issues and GitHub push size limit violations
 public/assets/**/*.mp4
