@@ -31,9 +31,3 @@ dist-ssr
 !/Assets/**/*.MP4
 /Assets/**/Anandha sayanam painting_.mov
 
-# Ignore large videos to prevent Git lock issues and GitHub push size limit violations
-public/assets/**/*.mp4
-public/assets/**/*.webm
-public/assets/**/*.ogg
-public/assets/**/*.mov
-public/assets/**/*.MOV
