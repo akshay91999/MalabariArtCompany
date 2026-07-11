@@ -24,7 +24,7 @@ export default function Lightbox({ artwork, onClose, onPrev, onNext, hasPrev, ha
 
     // Prefilled WhatsApp Enquiry content
     const whatsAppMessage = encodeURIComponent(
-        artwork.src.endsWith('.mp4') || artwork.src.endsWith('.mov')
+        /\.(mp4|mov|webm|ogg)$/i.test(artwork.src)
             ? `Hello Malabari Art Company, I watched the studio reel "${artwork.title}" and would like to consult about commissioning a custom artwork in the "${artwork.category}" category.`
             : `Hello Malabari Art Company, I am interested in purchasing/inquiring about the artwork titled "${artwork.title}" by ${artwork.artist} (Size: ${artwork.size}). Could you please share more details?`
     );
@@ -84,7 +84,7 @@ export default function Lightbox({ artwork, onClose, onPrev, onNext, hasPrev, ha
                 >
                     {/* Left Frame: Media viewport */}
                     <div className="flex-1 md:w-3/5 bg-ink-black flex items-center justify-center p-4 relative group aspect-[4/3] md:aspect-auto">
-                        {artwork.src.endsWith('.mp4') || artwork.src.endsWith('.mov') ? (
+                        {/\.(mp4|mov|webm|ogg)$/i.test(artwork.src) ? (
                             <video
                                 src={artwork.src}
                                 controls
@@ -100,7 +100,7 @@ export default function Lightbox({ artwork, onClose, onPrev, onNext, hasPrev, ha
                         )}
                         {/* Year Stamp */}
                         <span className="absolute bottom-4 left-4 text-[10px] tracking-widest text-[#888] font-bold bg-[#111] px-3 py-1 font-sans">
-                            {artwork.src.endsWith('.mp4') || artwork.src.endsWith('.mov') ? 'STUDIO REEL' : 'CERTIFIED ORIGINAL'} · {artwork.year}
+                            {/\.(mp4|mov|webm|ogg)$/i.test(artwork.src) ? 'STUDIO REEL' : 'CERTIFIED ORIGINAL'} · {artwork.year}
                         </span>
                     </div>
 
@@ -163,7 +163,7 @@ export default function Lightbox({ artwork, onClose, onPrev, onNext, hasPrev, ha
                                 className="group flex items-center justify-center gap-3 px-6 py-3.5 bg-accent-orange text-white text-sm uppercase tracking-wider font-bold rounded-none hover:bg-ink-black transition-all duration-300 shadow-md text-center"
                             >
                                 <MessageCircle size={16} />
-                                {artwork.src.endsWith('.mp4') || artwork.src.endsWith('.mov') ? 'Consult Custom Commission' : 'Enquire via WhatsApp'}
+                                {/\.(mp4|mov|webm|ogg)$/i.test(artwork.src) ? 'Consult Custom Commission' : 'Enquire via WhatsApp'}
                             </a>
 
                             {/* Email Enquiry Alternative */}

@@ -75,7 +75,7 @@ function VideoCard({ video, onClick }) {
         >
             <video
                 ref={videoRef}
-                src={video.src}
+                src={`${video.src}#t=0.1`}
                 preload="metadata"
                 muted
                 loop
