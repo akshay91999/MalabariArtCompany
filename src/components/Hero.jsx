@@ -6,8 +6,24 @@ import { brandStory, allArtworks } from '../data/site-data';
 export default function Hero() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Pick 3 high-quality artworks from allArtworks list for slideshow
-    const heroSlides = allArtworks.slice(0, Math.min(3, allArtworks.length));
+    // Pick 1 high-quality artwork from each of the 4 categories for the slideshow
+    const heroSlides = [];
+    const categories = [
+        "Canvas paintings",
+        "Portraits drawings",
+        "Wall art paintings",
+        "Wall art sculpture"
+    ];
+    categories.forEach(cat => {
+        const match = allArtworks.find(art => art.category === cat);
+        if (match) {
+            heroSlides.push(match);
+        }
+    });
+    // Fallback if we don't have all categories represented
+    if (heroSlides.length === 0) {
+        heroSlides.push(...allArtworks.slice(0, Math.min(4, allArtworks.length)));
+    }
 
     useEffect(() => {
         if (heroSlides.length <= 1) return;

@@ -4,28 +4,23 @@ import { allArtworks } from '../data/site-data';
 
 const CATEGORY_INFOS = [
     {
-        name: "Wall art",
-        tagline: "Transformative canvas layouts designed to elevate architectural spaces.",
-        fallbackIndex: 4
+        name: "Canvas paintings",
+        tagline: "Original oil and acrylic works on canvas, featuring rich textures and folklore motifs.",
+        fallbackIndex: 0
     },
     {
-        name: "3D Wall art",
-        tagline: "Multi-dimensional relief carvings and plaster murals.",
-        fallbackIndex: 7
+        name: "Portraits drawings",
+        tagline: "Fine-art custom drawings and portraits demonstrating realistic details and master drafting.",
+        fallbackIndex: 5
     },
     {
-        name: "Mural art",
-        tagline: "Grand scale storytelling on plaster and stucco backdrops.",
-        fallbackIndex: 9
+        name: "Wall art paintings",
+        tagline: "Transformative large-scale mural paintings designed to elevate walls and architectural structures.",
+        fallbackIndex: 12
     },
     {
-        name: "Canvas painting",
-        tagline: "Original oil and acrylic works on canvas.",
-        fallbackIndex: 14
-    },
-    {
-        name: "Sculpture art",
-        tagline: "Stunning hand-molded figurines in clay, brass, and terracotta.",
+        name: "Wall art sculpture",
+        tagline: "Stunning three-dimensional wall sculptures and relief artwork creating deep interplay of light and shadow.",
         fallbackIndex: 18
     }
 ];
@@ -106,10 +101,8 @@ export default function CategoryGrid({ onSelectCategory }) {
                     {CATEGORY_INFOS.map((cat, index) => {
                         const imgSrc = getCategoryImage(cat.name, cat.fallbackIndex);
 
-                        // Allocate different column spans for masonry like grid balance
-                        let colSpanClass = "md:col-span-3";
-                        if (index === 2) colSpanClass = "md:col-span-6"; // middle wide tile
-                        else if (index > 2) colSpanClass = "md:col-span-3";
+                        // Clean 2x2 grid layout (each spans 3 of 6 columns)
+                        const colSpanClass = "md:col-span-3";
 
                         return (
                             <motion.div

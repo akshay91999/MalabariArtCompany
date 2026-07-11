@@ -23,3 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 /Assets
+
+# Ignore large videos to prevent Git lock issues and GitHub push size limit violations
+public/assets/**/*.mp4
+public/assets/**/*.webm
+public/assets/**/*.ogg
+public/assets/**/*.mov
+public/assets/**/*.MOV

@@ -54,7 +54,8 @@ function AnimatedCounter({ value, label, suffix = "" }) {
 
 export default function OurStory() {
     // Use the first video in the list as the editorial visual reel
-    const videoSrc = assetsData.videos.length > 0 ? assetsData.videos[0] : null;
+    const videoObj = assetsData.videos.length > 0 ? assetsData.videos[0] : null;
+    const videoSrc = videoObj ? videoObj.src : null;
     // Use the logo or a random painting as an overlay picture
     const paintingSrc = allArtworks.length > 10 ? allArtworks[10].src : allArtworks[0]?.src;
 

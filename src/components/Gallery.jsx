@@ -145,20 +145,15 @@ export default function Gallery({ onSelectArtwork, activeCategory, setActiveCate
 
                                     {/* Details Footer */}
                                     <div className="mt-4 text-left flex flex-col flex-grow">
-                                        <div className="flex justify-between items-start gap-4">
-                                            <div className="flex flex-col">
-                                                <span className="text-[9px] uppercase tracking-wider text-accent-orange font-semibold">
-                                                    {art.category}
-                                                </span>
-                                                <span className="font-serif text-lg font-medium text-ink-black mt-0.5 group-hover:text-accent-orange transition-colors duration-300">
-                                                    {art.title}
-                                                </span>
-                                                <span className="text-[11px] text-ink-black/50 font-sans">
-                                                    by {art.artist}
-                                                </span>
-                                            </div>
-                                            <span className="font-serif text-base font-semibold text-ink-black leading-none shrink-0 pt-1">
-                                                {art.formattedPrice}
+                                        <div className="flex flex-col">
+                                            <span className="text-[9px] uppercase tracking-wider text-accent-orange font-semibold">
+                                                {art.category}
+                                            </span>
+                                            <span className="font-serif text-lg font-medium text-ink-black mt-0.5 group-hover:text-accent-orange transition-colors duration-300">
+                                                {art.title}
+                                            </span>
+                                            <span className="text-[11px] text-ink-black/50 font-sans">
+                                                by {art.artist}
                                             </span>
                                         </div>
 

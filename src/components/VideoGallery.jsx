@@ -27,12 +27,39 @@ function VideoCard({ video, onClick }) {
     };
 
     // Convert files names to human-readable titles
-    const formattedTitle = video.name
-        .replace('WhatsApp Video ', '')
-        .replace('.mp4', '')
-        .replace(/at\s/i, '')
-        .replace(/PM|AM/i, '')
-        .trim() || 'Creation Reel';
+    const cleanVideoTitle = (name) => {
+        let title = name.replace('WhatsApp Video ', '');
+        title = title.replace(/\.[^/.]+$/, ""); // strip extension
+        title = title.replace(/[_-]/g, " ").replace(/\s+/g, " ").trim();
+        
+        const romanize = (num) => {
+            const lookup = { M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50, XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1 };
+            let roman = '';
+            for (let i in lookup) {
+                while (num >= lookup[i]) {
+                    roman += i;
+                    num -= lookup[i];
+                }
+            }
+            return roman;
+        };
+        
+        title = title.replace(/\((\d+)\)$/, (match, p1) => {
+            const num = parseInt(p1, 10);
+            return ` ${romanize(num)}`;
+        });
+        
+        title = title.replace(/at\s/i, '').replace(/PM|AM/i, '').trim();
+
+        title = title.split(" ").map(word => {
+            if (!word) return "";
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }).join(" ");
+        
+        return title || 'Creation Reel';
+    };
+
+    const formattedTitle = cleanVideoTitle(video.name);
 
     return (
         <motion.div

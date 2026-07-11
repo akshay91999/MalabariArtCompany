@@ -165,9 +165,6 @@ export default function FeaturedCarousel({ onSelectArtwork }) {
                                     <span className="text-xs text-ink-black/50 font-sans italic">
                                         {artwork.size} · {artwork.medium}
                                     </span>
-                                    <span className="font-serif text-base font-semibold text-ink-black leading-none">
-                                        {artwork.formattedPrice}
-                                    </span>
                                 </div>
                             </div>
                         </motion.div>

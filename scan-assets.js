@@ -1,24 +1,82 @@
 import fs from 'fs';
 import path from 'path';
+import convert from 'heic-convert';
 
 const srcFolder = path.join(process.cwd(), 'Assets');
 const targetFolder = path.join(process.cwd(), 'public', 'assets');
 const outputFilePath = path.join(process.cwd(), 'src', 'assets-list.json');
 
-// Reusable recursive copy function
-function copyFolderSync(from, to) {
+const isProd = process.env.NODE_ENV === 'production' || process.env.VERCEL === '1' || process.argv.includes('--prod');
+
+function isHeic(filePath) {
+    try {
+        const ext = path.extname(filePath).toLowerCase();
+        if (ext === '.heic') return true;
+        
+        if (fs.lstatSync(filePath).isDirectory()) return false;
+        
+        const fd = fs.openSync(filePath, 'r');
+        const buffer = Buffer.alloc(16);
+        fs.readSync(fd, buffer, 0, 16, 0);
+        fs.closeSync(fd);
+        const hex = buffer.toString('hex').toLowerCase();
+        if (hex.includes('66747970')) { // ftyp
+            const brand = buffer.slice(8, 12).toString('ascii').trim();
+            if (brand === 'heic') return true;
+        }
+    } catch {
+        // ignore
+    }
+    return false;
+}
+
+// Reusable recursive copy and HEIC conversion function
+async function copyFolderAsync(from, to) {
     if (!fs.existsSync(to)) {
         fs.mkdirSync(to, { recursive: true });
     }
-    fs.readdirSync(from).forEach(element => {
+    const elements = fs.readdirSync(from);
+    for (const element of elements) {
         const fromPath = path.join(from, element);
-        const toPath = path.join(to, element);
         if (fs.lstatSync(fromPath).isDirectory()) {
-            copyFolderSync(fromPath, toPath);
+            const toPath = path.join(to, element);
+            await copyFolderAsync(fromPath, toPath);
         } else {
-            fs.copyFileSync(fromPath, toPath);
+            const ext = path.extname(element).toLowerCase();
+            if (['.mp4', '.webm', '.ogg', '.mov'].includes(ext) && isProd) {
+                continue;
+            }
+            if (isHeic(fromPath)) {
+                const baseName = path.basename(element, path.extname(element));
+                const toPath = path.join(to, baseName + '.jpg');
+                console.log(`Converting HEIC: ${element} -> ${baseName}.jpg`);
+                try {
+                    const inputBuffer = fs.readFileSync(fromPath);
+                    const outputBuffer = await convert({
+                        buffer: inputBuffer,
+                        format: 'JPEG',
+                        quality: 0.85
+                    });
+                    fs.writeFileSync(toPath, outputBuffer);
+                } catch (err) {
+                    console.error(`Failed to convert HEIC file ${fromPath}:`, err);
+                    const rawToPath = path.join(to, element);
+                    try {
+                        fs.copyFileSync(fromPath, rawToPath);
+                    } catch (copyErr) {
+                        console.warn(`Warning: Could not copy HEIC fallback file ${element}: ${copyErr.message}`);
+                    }
+                }
+            } else {
+                const toPath = path.join(to, element);
+                try {
+                    fs.copyFileSync(fromPath, toPath);
+                } catch (copyErr) {
+                    console.warn(`Warning: Could not copy file ${element} (it might be locked by another process): ${copyErr.message}`);
+                }
+            }
         }
-    });
+    }
 }
 
 try {
@@ -28,11 +86,15 @@ try {
     }
 
     console.log(`Cleaning old public/assets...`);
-    fs.rmSync(targetFolder, { recursive: true, force: true });
+    try {
+        fs.rmSync(targetFolder, { recursive: true, force: true });
+    } catch (err) {
+        console.warn(`Warning: Failed to clean target folder public/assets: ${err.message}. Overwriting files...`);
+    }
     fs.mkdirSync(targetFolder, { recursive: true });
 
-    console.log(`Copying Assets directory to public/assets recursively...`);
-    copyFolderSync(srcFolder, targetFolder);
+    console.log(`Copying and converting Assets directory to public/assets recursively...`);
+    await copyFolderAsync(srcFolder, targetFolder);
 
     const images = [];
     const videos = [];
@@ -46,7 +108,14 @@ try {
             const relPath = relativeDir ? path.join(relativeDir, file) : file;
             const ext = path.extname(file).toLowerCase();
 
-            if (fs.lstatSync(fullPath).isDirectory()) {
+            let isDir = false;
+            try {
+                isDir = fs.lstatSync(fullPath).isDirectory();
+            } catch {
+                isDir = false;
+            }
+
+            if (isDir) {
                 scanFolderRecursive(fullPath, relPath);
             } else {
                 // Construct standard web path for react consumption
@@ -69,7 +138,10 @@ try {
                         category,
                         name: file
                     });
-                } else if (['.mp4', '.webm', '.ogg'].includes(ext)) {
+                } else if (['.mp4', '.webm', '.ogg', '.mov'].includes(ext)) {
+                    if (isProd) {
+                        return;
+                    }
                     const category = relativeDir || 'General Reel';
                     videos.push({
                         src: webPath,
