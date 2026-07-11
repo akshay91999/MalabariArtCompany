@@ -45,6 +45,13 @@ async function copyFolderAsync(from, to) {
             if (isHeic(fromPath)) {
                 const baseName = path.basename(element, path.extname(element));
                 const toPath = path.join(to, baseName + '.jpg');
+                if (fs.existsSync(toPath)) {
+                    const srcStat = fs.statSync(fromPath);
+                    const destStat = fs.statSync(toPath);
+                    if (srcStat.mtime <= destStat.mtime) {
+                        continue;
+                    }
+                }
                 console.log(`Converting HEIC: ${element} -> ${baseName}.jpg`);
                 try {
                     const inputBuffer = fs.readFileSync(fromPath);
@@ -65,6 +72,13 @@ async function copyFolderAsync(from, to) {
                 }
             } else {
                 const toPath = path.join(to, element);
+                if (fs.existsSync(toPath)) {
+                    const srcStat = fs.statSync(fromPath);
+                    const destStat = fs.statSync(toPath);
+                    if (srcStat.mtime <= destStat.mtime) {
+                        continue;
+                    }
+                }
                 try {
                     fs.copyFileSync(fromPath, toPath);
                 } catch (copyErr) {
@@ -81,13 +95,10 @@ try {
         process.exit(0);
     }
 
-    console.log(`Cleaning old public/assets...`);
-    try {
-        fs.rmSync(targetFolder, { recursive: true, force: true });
-    } catch (err) {
-        console.warn(`Warning: Failed to clean target folder public/assets: ${err.message}. Overwriting files...`);
+    console.log(`Ensuring public/assets exists...`);
+    if (!fs.existsSync(targetFolder)) {
+        fs.mkdirSync(targetFolder, { recursive: true });
     }
-    fs.mkdirSync(targetFolder, { recursive: true });
 
     console.log(`Copying and converting Assets directory to public/assets recursively...`);
     await copyFolderAsync(srcFolder, targetFolder);
