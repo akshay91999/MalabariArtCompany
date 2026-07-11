@@ -76,6 +76,7 @@ function VideoCard({ video, onClick }) {
             <video
                 ref={videoRef}
                 src={video.src}
+                preload="metadata"
                 muted
                 loop
                 playsInline

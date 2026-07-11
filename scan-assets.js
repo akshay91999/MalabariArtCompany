@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import convert from 'heic-convert';
+import { Jimp } from 'jimp';
 
 const srcFolder = path.join(process.cwd(), 'Assets');
 const targetFolder = path.join(process.cwd(), 'public', 'assets');
@@ -42,6 +43,7 @@ async function copyFolderAsync(from, to) {
             const toPath = path.join(to, element);
             await copyFolderAsync(fromPath, toPath);
         } else {
+            const ext = path.extname(element).toLowerCase();
             if (isHeic(fromPath)) {
                 const baseName = path.basename(element, path.extname(element));
                 const toPath = path.join(to, baseName + '.jpg');
@@ -52,15 +54,36 @@ async function copyFolderAsync(from, to) {
                         continue;
                     }
                 }
-                console.log(`Converting HEIC: ${element} -> ${baseName}.jpg`);
+                console.log(`Converting and compressing HEIC: ${element} -> ${baseName}.jpg`);
                 try {
                     const inputBuffer = fs.readFileSync(fromPath);
-                    const outputBuffer = await convert({
+                    const jpegBuffer = await convert({
                         buffer: inputBuffer,
                         format: 'JPEG',
-                        quality: 0.85
+                        quality: 0.3
                     });
-                    fs.writeFileSync(toPath, outputBuffer);
+                    
+                    try {
+                        // Optimize and resize with Jimp
+                        const image = await Jimp.read(jpegBuffer);
+                        const maxDim = 1200;
+                        if (image.width > maxDim || image.height > maxDim) {
+                            let w = image.width;
+                            let h = image.height;
+                            if (w > h) {
+                                h = Math.round(h * (maxDim / w));
+                                w = maxDim;
+                            } else {
+                                w = Math.round(w * (maxDim / h));
+                                h = maxDim;
+                            }
+                            image.resize({ w, h });
+                        }
+                        await image.write(toPath);
+                    } catch (jimpErr) {
+                        console.warn(`Warning: Jimp optimization failed for ${element}, saving raw JPEG: ${jimpErr.message}`);
+                        fs.writeFileSync(toPath, jpegBuffer);
+                    }
                 } catch (err) {
                     console.error(`Failed to convert HEIC file ${fromPath}:`, err);
                     const rawToPath = path.join(to, element);
@@ -79,10 +102,41 @@ async function copyFolderAsync(from, to) {
                         continue;
                     }
                 }
-                try {
-                    fs.copyFileSync(fromPath, toPath);
-                } catch (copyErr) {
-                    console.warn(`Warning: Could not copy file ${element} (it might be locked by another process): ${copyErr.message}`);
+                
+                // If it is an image (jpg, jpeg, png, webp), optimize and resize it!
+                if (['.jpg', '.jpeg', '.png', '.webp'].includes(ext)) {
+                    console.log(`Optimizing image: ${element}`);
+                    try {
+                        const image = await Jimp.read(fromPath);
+                        const maxDim = 1200;
+                        if (image.width > maxDim || image.height > maxDim) {
+                            let w = image.width;
+                            let h = image.height;
+                            if (w > h) {
+                                h = Math.round(h * (maxDim / w));
+                                w = maxDim;
+                            } else {
+                                w = Math.round(w * (maxDim / h));
+                                h = maxDim;
+                            }
+                            image.resize({ w, h });
+                        }
+                        await image.write(toPath);
+                    } catch (imageErr) {
+                        console.warn(`Warning: Could not optimize image ${element}, falling back to direct copy: ${imageErr.message}`);
+                        try {
+                            fs.copyFileSync(fromPath, toPath);
+                        } catch (copyErr) {
+                            console.warn(`Warning: Could not copy file ${element}: ${copyErr.message}`);
+                        }
+                    }
+                } else {
+                    // For videos and other non-image files, copy directly
+                    try {
+                        fs.copyFileSync(fromPath, toPath);
+                    } catch (copyErr) {
+                        console.warn(`Warning: Could not copy file ${element} (it might be locked): ${copyErr.message}`);
+                    }
                 }
             }
         }
